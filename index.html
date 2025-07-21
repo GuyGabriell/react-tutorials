@@ -6,30 +6,57 @@
     <title>React-Lesson</title>
   </head>
   <body>
-   <div id="app"></div>
+    <h1>Building UI with Components</h1>
+    <div id="app"></div>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-     <!-- Babel Script -->
+    <!-- Babel Script -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <!--
-    //imperative JavaScript code
-    <script type="text/javascript">
+    <!--- 
+   <script type="text/jsx">
       const app = document.getElementById('app');
-      const header = document.createElement('h1');
-      const text = 'Develop. Preview. Ship.';
-      const headerContent = document.createTextNode(text);
-      header.appendChild(headerContent);
-      app.appendChild(header);
-</script>
-    -->
 
-    <!--declarative JavaScript code //JSX-->
-    <script type="text/jsx">
-      const app = document.getElementById('app');
+      function header() {}
+
       const root = ReactDOM.createRoot(app);
       root.render(<h1>Develop. Preview. Ship.</h1>);
     </script>
+   
+
+    <script type="text/jsx">
+      const app = document.getElementById('app');
+
+      function header() {
+        return <h1>Develop. Preview. Ship.</h1>;
+      }
+
+      const root = ReactDOM.createRoot(app);
+      root.render(<h1>Develop. Preview. Ship.</h1>);
+    </script>
+     
+
+    <script type="text/jsx">
+      //capitalize react Components
+      const app = document.getElementById('app');
+
+      function Header() {
+        return <h1>Develop. Preview. Ship.</h1>;
+      }
+
+      const root = ReactDOM.createRoot(app);
+      root.render(Header);
+    </script>
+    -->
+
+    <!--use react componets as regular HTML elements-->
+    <script type="text/jsx">
+      function Header() {
+        return <h1>Develop. Preview. Ship.</h1>;
+      }
+
+      const root = ReactDOM.createRoot(app);
+      root.render(<Header />);
     </script>
   </body>
 </html>
